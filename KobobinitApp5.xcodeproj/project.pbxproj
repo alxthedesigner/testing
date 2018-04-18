@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9402A417207F0AFD00127DD0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9402A416207F0AFD00127DD0 /* GoogleService-Info.plist */; };
+		9402A42D2085533D00127DD0 /* homeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402A42C2085533D00127DD0 /* homeScreenViewController.swift */; };
+		9402A42F208553D100127DD0 /* bottomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402A42E208553D100127DD0 /* bottomTabBarViewController.swift */; };
+		942F3C40206F4A3C00AC0C25 /* coreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942F3C3F206F4A3C00AC0C25 /* coreDataViewController.swift */; };
+		9434019820862E4E00BAA0F5 /* accountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9434019720862E4E00BAA0F5 /* accountInfoViewController.swift */; };
+		9434019A2086307900BAA0F5 /* menuAndBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943401992086307900BAA0F5 /* menuAndBookingViewController.swift */; };
+		9434019C20864ABC00BAA0F5 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9434019B20864ABC00BAA0F5 /* signUpViewController.swift */; };
+		94BDFF54206BE8F3002CF22B /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BDFF53206BE8F3002CF22B /* menuViewController.swift */; };
+		94BDFF56206BE9DA002CF22B /* menuItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BDFF55206BE9DA002CF22B /* menuItemsTableViewCell.swift */; };
+		94C6E6AE2069695C002D3654 /* finalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C6E6AD2069695C002D3654 /* finalTableViewCell.swift */; };
+		94CEBDDB2064419F003DA437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEBDDA2064419F003DA437 /* AppDelegate.swift */; };
+		94CEBDDD2064419F003DA437 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEBDDC2064419F003DA437 /* ViewController.swift */; };
+		94CEBDE02064419F003DA437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94CEBDDE2064419F003DA437 /* Main.storyboard */; };
+		94CEBDE32064419F003DA437 /* KobobinitApp5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94CEBDE12064419F003DA437 /* KobobinitApp5.xcdatamodeld */; };
+		94CEBDE52064419F003DA437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94CEBDE42064419F003DA437 /* Assets.xcassets */; };
+		94CEBDE82064419F003DA437 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94CEBDE62064419F003DA437 /* LaunchScreen.storyboard */; };
+		94CEBDF82064439F003DA437 /* logInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEBDF72064439F003DA437 /* logInViewController.swift */; };
+		94DFCDC4206C418100DCD5BE /* adminPortalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DFCDC3206C418100DCD5BE /* adminPortalViewController.swift */; };
+		CA16006F2931FEA6D7A24DD7 /* Pods_KobobinitApp5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4661F8F4AC9DB4AF453B2D00 /* Pods_KobobinitApp5.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4661F8F4AC9DB4AF453B2D00 /* Pods_KobobinitApp5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KobobinitApp5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67EAD9FD1B959916372A173B /* Pods-KobobinitApp5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KobobinitApp5.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KobobinitApp5/Pods-KobobinitApp5.debug.xcconfig"; sourceTree = "<group>"; };
+		9402A416207F0AFD00127DD0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9402A42C2085533D00127DD0 /* homeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeScreenViewController.swift; sourceTree = "<group>"; };
+		9402A42E208553D100127DD0 /* bottomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bottomTabBarViewController.swift; sourceTree = "<group>"; };
+		94117DF52064795800DC755F /* KobobinitApp5-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KobobinitApp5-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		942F3C3F206F4A3C00AC0C25 /* coreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreDataViewController.swift; sourceTree = "<group>"; };
+		9434019720862E4E00BAA0F5 /* accountInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountInfoViewController.swift; sourceTree = "<group>"; };
+		943401992086307900BAA0F5 /* menuAndBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuAndBookingViewController.swift; sourceTree = "<group>"; };
+		9434019B20864ABC00BAA0F5 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
+		94BDFF53206BE8F3002CF22B /* menuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
+		94BDFF55206BE9DA002CF22B /* menuItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuItemsTableViewCell.swift; sourceTree = "<group>"; };
+		94C6E6AD2069695C002D3654 /* finalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalTableViewCell.swift; sourceTree = "<group>"; };
+		94CEBDD72064419F003DA437 /* KobobinitApp5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KobobinitApp5.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94CEBDDA2064419F003DA437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		94CEBDDC2064419F003DA437 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		94CEBDDF2064419F003DA437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		94CEBDE22064419F003DA437 /* KobobinitApp5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KobobinitApp5.xcdatamodel; sourceTree = "<group>"; };
+		94CEBDE42064419F003DA437 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94CEBDE72064419F003DA437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		94CEBDE92064419F003DA437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94CEBDF72064439F003DA437 /* logInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logInViewController.swift; sourceTree = "<group>"; };
+		94DFCDC3206C418100DCD5BE /* adminPortalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminPortalViewController.swift; sourceTree = "<group>"; };
+		E5904ED6271EC786A3F91198 /* Pods-KobobinitApp5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KobobinitApp5.release.xcconfig"; path = "Pods/Target Support Files/Pods-KobobinitApp5/Pods-KobobinitApp5.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94CEBDD42064419F003DA437 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA16006F2931FEA6D7A24DD7 /* Pods_KobobinitApp5.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		51B692FDA64981F7EC3005ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4661F8F4AC9DB4AF453B2D00 /* Pods_KobobinitApp5.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94CEBDCE2064419F003DA437 = {
+			isa = PBXGroup;
+			children = (
+				94CEBDD92064419F003DA437 /* KobobinitApp5 */,
+				94CEBDD82064419F003DA437 /* Products */,
+				F342E751EF2275A11DCF102C /* Pods */,
+				51B692FDA64981F7EC3005ED /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		94CEBDD82064419F003DA437 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94CEBDD72064419F003DA437 /* KobobinitApp5.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94CEBDD92064419F003DA437 /* KobobinitApp5 */ = {
+			isa = PBXGroup;
+			children = (
+				94CEBDDE2064419F003DA437 /* Main.storyboard */,
+				94CEBDDA2064419F003DA437 /* AppDelegate.swift */,
+				9434019720862E4E00BAA0F5 /* accountInfoViewController.swift */,
+				94DFCDC3206C418100DCD5BE /* adminPortalViewController.swift */,
+				9402A42E208553D100127DD0 /* bottomTabBarViewController.swift */,
+				942F3C3F206F4A3C00AC0C25 /* coreDataViewController.swift */,
+				943401992086307900BAA0F5 /* menuAndBookingViewController.swift */,
+				94C6E6AD2069695C002D3654 /* finalTableViewCell.swift */,
+				9402A42C2085533D00127DD0 /* homeScreenViewController.swift */,
+				94117DF52064795800DC755F /* KobobinitApp5-Bridging-Header.h */,
+				94CEBDF72064439F003DA437 /* logInViewController.swift */,
+				94BDFF53206BE8F3002CF22B /* menuViewController.swift */,
+				94BDFF55206BE9DA002CF22B /* menuItemsTableViewCell.swift */,
+				9434019B20864ABC00BAA0F5 /* signUpViewController.swift */,
+				94CEBDDC2064419F003DA437 /* ViewController.swift */,
+				94CEBDE42064419F003DA437 /* Assets.xcassets */,
+				94CEBDE62064419F003DA437 /* LaunchScreen.storyboard */,
+				9402A416207F0AFD00127DD0 /* GoogleService-Info.plist */,
+				94CEBDE92064419F003DA437 /* Info.plist */,
+				94CEBDE12064419F003DA437 /* KobobinitApp5.xcdatamodeld */,
+			);
+			path = KobobinitApp5;
+			sourceTree = "<group>";
+		};
+		F342E751EF2275A11DCF102C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67EAD9FD1B959916372A173B /* Pods-KobobinitApp5.debug.xcconfig */,
+				E5904ED6271EC786A3F91198 /* Pods-KobobinitApp5.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94CEBDD62064419F003DA437 /* KobobinitApp5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94CEBDEC2064419F003DA437 /* Build configuration list for PBXNativeTarget "KobobinitApp5" */;
+			buildPhases = (
+				37D3ADA540784C421029186D /* [CP] Check Pods Manifest.lock */,
+				94CEBDD32064419F003DA437 /* Sources */,
+				94CEBDD42064419F003DA437 /* Frameworks */,
+				94CEBDD52064419F003DA437 /* Resources */,
+				5C50B3054DC71DCD6D393337 /* [CP] Embed Pods Frameworks */,
+				0441039EF241D2BC304315CA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KobobinitApp5;
+			productName = KobobinitApp5;
+			productReference = 94CEBDD72064419F003DA437 /* KobobinitApp5.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94CEBDCF2064419F003DA437 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Alex Stanford";
+				TargetAttributes = {
+					94CEBDD62064419F003DA437 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 94CEBDD22064419F003DA437 /* Build configuration list for PBXProject "KobobinitApp5" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 94CEBDCE2064419F003DA437;
+			productRefGroup = 94CEBDD82064419F003DA437 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94CEBDD62064419F003DA437 /* KobobinitApp5 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94CEBDD52064419F003DA437 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94CEBDE82064419F003DA437 /* LaunchScreen.storyboard in Resources */,
+				9402A417207F0AFD00127DD0 /* GoogleService-Info.plist in Resources */,
+				94CEBDE52064419F003DA437 /* Assets.xcassets in Resources */,
+				94CEBDE02064419F003DA437 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0441039EF241D2BC304315CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KobobinitApp5/Pods-KobobinitApp5-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37D3ADA540784C421029186D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KobobinitApp5-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C50B3054DC71DCD6D393337 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KobobinitApp5/Pods-KobobinitApp5-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KobobinitApp5/Pods-KobobinitApp5-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94CEBDD32064419F003DA437 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9434019C20864ABC00BAA0F5 /* signUpViewController.swift in Sources */,
+				94DFCDC4206C418100DCD5BE /* adminPortalViewController.swift in Sources */,
+				9402A42D2085533D00127DD0 /* homeScreenViewController.swift in Sources */,
+				9434019820862E4E00BAA0F5 /* accountInfoViewController.swift in Sources */,
+				942F3C40206F4A3C00AC0C25 /* coreDataViewController.swift in Sources */,
+				94C6E6AE2069695C002D3654 /* finalTableViewCell.swift in Sources */,
+				94BDFF56206BE9DA002CF22B /* menuItemsTableViewCell.swift in Sources */,
+				94CEBDE32064419F003DA437 /* KobobinitApp5.xcdatamodeld in Sources */,
+				94CEBDDD2064419F003DA437 /* ViewController.swift in Sources */,
+				94CEBDDB2064419F003DA437 /* AppDelegate.swift in Sources */,
+				94BDFF54206BE8F3002CF22B /* menuViewController.swift in Sources */,
+				9434019A2086307900BAA0F5 /* menuAndBookingViewController.swift in Sources */,
+				9402A42F208553D100127DD0 /* bottomTabBarViewController.swift in Sources */,
+				94CEBDF82064439F003DA437 /* logInViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		94CEBDDE2064419F003DA437 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94CEBDDF2064419F003DA437 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		94CEBDE62064419F003DA437 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94CEBDE72064419F003DA437 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		94CEBDEA2064419F003DA437 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		94CEBDEB2064419F003DA437 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		94CEBDED2064419F003DA437 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67EAD9FD1B959916372A173B /* Pods-KobobinitApp5.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KobobinitApp5/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.KobobinitApp5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		94CEBDEE2064419F003DA437 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5904ED6271EC786A3F91198 /* Pods-KobobinitApp5.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KobobinitApp5/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.KobobinitApp5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94CEBDD22064419F003DA437 /* Build configuration list for PBXProject "KobobinitApp5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94CEBDEA2064419F003DA437 /* Debug */,
+				94CEBDEB2064419F003DA437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94CEBDEC2064419F003DA437 /* Build configuration list for PBXNativeTarget "KobobinitApp5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94CEBDED2064419F003DA437 /* Debug */,
+				94CEBDEE2064419F003DA437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		94CEBDE12064419F003DA437 /* KobobinitApp5.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				94CEBDE22064419F003DA437 /* KobobinitApp5.xcdatamodel */,
+			);
+			currentVersion = 94CEBDE22064419F003DA437 /* KobobinitApp5.xcdatamodel */;
+			path = KobobinitApp5.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 94CEBDCF2064419F003DA437 /* Project object */;
+}

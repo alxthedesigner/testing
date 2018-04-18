@@ -1,0 +1,6 @@
+framework module Pods_KobobinitApp5 {
+  umbrella header "Pods-KobobinitApp5-umbrella.h"
+
+  export *
+  module * { export * }
+}
