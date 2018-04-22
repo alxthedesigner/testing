@@ -418,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N5W-H2-0wk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1756" y="1101"/>
+            <point key="canvasLocation" x="1588" y="1014"/>
         </scene>
         <!--Menu-->
         <scene sceneID="cK3-nQ-Di7">
@@ -498,15 +498,45 @@
                                     <navigationItem title="Account" id="rlR-Lo-08h"/>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ogg-6e-bZ5">
+                                <rect key="frame" x="67" y="103" width="240" height="226"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wf6-0A-P03">
+                                <rect key="frame" x="67" y="367" width="240" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzG-R1-ueB">
+                                <rect key="frame" x="67" y="396" width="240" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFy-to-jsY">
+                                <rect key="frame" x="67" y="425" width="240" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.50980392159999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="PgB-Dj-gN8"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" id="Emn-TS-Z31"/>
+                    <connections>
+                        <outlet property="userBirthday" destination="uFy-to-jsY" id="pAS-36-dWa"/>
+                        <outlet property="userEmail" destination="KzG-R1-ueB" id="gxc-9x-3So"/>
+                        <outlet property="userFullName" destination="Wf6-0A-P03" id="7NF-Sn-KSn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lmi-q3-pmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1588" y="2101"/>
+            <point key="canvasLocation" x="1588" y="2100.8995502248877"/>
         </scene>
         <!--Order From Your Seat-->
         <scene sceneID="sDR-WI-PV0">
@@ -1332,6 +1362,6 @@
         <image name="Menu" width="612" height="919"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bhP-t5-Xa5"/>
+        <segue reference="wXZ-9h-0B7"/>
     </inferredMetricsTieBreakers>
 </document>

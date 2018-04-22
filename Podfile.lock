@@ -61,6 +61,7 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Stripe (12.1.2)
+  - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -71,6 +72,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Stripe
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
@@ -90,7 +92,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Stripe: 3230cdf8a8b0c04902e45e86f222fb82a926239c
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: e1ed94a7bd56013414e7ea7fb1e454b49c22cd86
+PODFILE CHECKSUM: f9286a0295d691150509d6e8a5fc840f496e9f20
 
 COCOAPODS: 1.4.0
