@@ -17,6 +17,8 @@ import FirebaseAuth
 
 class logInViewController: UIViewController{
 
+    
+    //HOSTING URL https://food-app-404dc.firebaseapp.com
     //MARK: LOG IN/SIGN UP PROPERTIES
 
     @IBOutlet var logInEmail: UITextField!
@@ -91,6 +93,8 @@ class logInViewController: UIViewController{
                 
             }
         }
+        
+        
     }
     
     

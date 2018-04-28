@@ -16,12 +16,15 @@ class accountInfoViewController: UIViewController {
     @IBOutlet weak var userFullName: UILabel?
     @IBOutlet weak var userEmail: UILabel?
     @IBOutlet weak var userBirthday: UILabel?
-   
+    @IBOutlet weak var profilePhoto: UIImageView?
+    
     var jsonID : String?
     var jsonFirstName : String?
     var jsonLastName : String?
     var jsonEmail : String?
     var jsonBirthday : String?
+    var photo : UIImage?
+
     
 
     override func viewDidLoad() {
@@ -44,7 +47,7 @@ class accountInfoViewController: UIViewController {
     
         let graphPath = "/me"
         let accToken = AccessToken.current
-        let parameters: [String : String]? = ["fields": "id, first_name,last_name,email,birthday"]
+        let parameters: [String : String]? = ["fields": "id, first_name,last_name,email,birthday,picture.type(large)"]
         let httpMethod: GraphRequestHTTPMethod = .GET
         let apiVersion: GraphAPIVersion = .defaultVersion
         let graphConnection = GraphRequestConnection()
@@ -55,7 +58,7 @@ class accountInfoViewController: UIViewController {
             switch result {
             case .success(let response):
                 print("Graph Request Connection Established")
-                //print("\(response)")
+             
                 
                 guard let responseDictionary = response.dictionaryValue else {return}
                 print(response)                     //All JSON type fields from response
@@ -67,16 +70,19 @@ class accountInfoViewController: UIViewController {
                 self.jsonLastName = jsonTypeResponse["last_name"].string
                 self.jsonEmail = jsonTypeResponse["email"].string
                 self.jsonBirthday = jsonTypeResponse["birthday"].string
+                //self.jsonProfilePic = jsonTypeResponse[].image
+               
                 
                 if(self.jsonID != nil){
                     //self.changeNames()
                     print("JSON values are not nil")
                     print("\(self.jsonFirstName)")
                     self.changeNames()
-                    
+
                 }else{
-                    print("JSON ID EMPTY!!!!")
+                    print("JSON FACEBOOK ID EMPTY!!!!")
                 }
+                
                 
                 
             case .failed(let error):
@@ -91,6 +97,8 @@ class accountInfoViewController: UIViewController {
         userFullName?.text = "\(jsonFirstName!)" + " " + "\(jsonLastName!)"
         userEmail?.text = jsonEmail
         userBirthday?.text = jsonBirthday
+        profilePhoto?
+            .image = photo
     }
     
 }

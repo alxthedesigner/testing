@@ -428,9 +428,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m7K-mD-7Ap">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7K-mD-7Ap">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kcO-rE-Jba"/>
+                                </constraints>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="0.92549019610000005" green="0.50980392159999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
@@ -438,19 +440,31 @@
                                     <navigationItem title="Catering Menu" id="kAB-S6-kYL"/>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Menu" translatesAutoresizingMaskIntoConstraints="NO" id="SYd-Ad-XDf">
-                                <rect key="frame" x="0.0" y="44" width="375" height="562"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menu" translatesAutoresizingMaskIntoConstraints="NO" id="SYd-Ad-XDf">
+                                <rect key="frame" x="0.0" y="70" width="375" height="556"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SYd-Ad-XDf" firstAttribute="leading" secondItem="2jr-hl-erR" secondAttribute="leading" id="26f-DR-RVK"/>
+                            <constraint firstItem="SYd-Ad-XDf" firstAttribute="leading" secondItem="2jr-hl-erR" secondAttribute="leading" id="9dX-4w-fXZ"/>
+                            <constraint firstItem="SYd-Ad-XDf" firstAttribute="top" secondItem="m7K-mD-7Ap" secondAttribute="bottom" id="OwP-NN-lk4"/>
+                            <constraint firstAttribute="bottom" secondItem="SYd-Ad-XDf" secondAttribute="bottom" constant="41" id="QGH-Ge-DZP"/>
+                            <constraint firstItem="m7K-mD-7Ap" firstAttribute="top" secondItem="RxV-eI-ELb" secondAttribute="top" constant="20" id="Qgs-og-njS"/>
+                            <constraint firstAttribute="bottom" secondItem="SYd-Ad-XDf" secondAttribute="bottom" constant="41" id="aXY-LI-mTB"/>
+                            <constraint firstItem="m7K-mD-7Ap" firstAttribute="leading" secondItem="2jr-hl-erR" secondAttribute="leading" id="ar4-5x-swg"/>
+                            <constraint firstItem="SYd-Ad-XDf" firstAttribute="trailing" secondItem="2jr-hl-erR" secondAttribute="trailing" id="eQ7-mv-9za"/>
+                            <constraint firstAttribute="bottom" secondItem="SYd-Ad-XDf" secondAttribute="bottom" constant="41" id="ikB-qx-18G"/>
+                            <constraint firstItem="SYd-Ad-XDf" firstAttribute="trailing" secondItem="2jr-hl-erR" secondAttribute="trailing" id="jq9-wl-hXs"/>
+                            <constraint firstItem="m7K-mD-7Ap" firstAttribute="trailing" secondItem="2jr-hl-erR" secondAttribute="trailing" id="wY4-7G-V5b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2jr-hl-erR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Menu" id="NbN-8v-ZVa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GKR-BX-Rom" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-48" y="2101"/>
+            <point key="canvasLocation" x="-48.799999999999997" y="2100.8995502248877"/>
         </scene>
         <!--Bookings-->
         <scene sceneID="7Q1-0d-aVB">
@@ -460,9 +474,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Sw-ip-www">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Sw-ip-www">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Cdw-Qz-sRq"/>
+                                </constraints>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="0.92549019610000005" green="0.50980392159999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
@@ -472,6 +488,9 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.50980392159999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1Sw-ip-www" firstAttribute="top" secondItem="j2w-ZM-FkL" secondAttribute="top" constant="20" id="dBy-hp-rdh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="718-B3-gZ9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Bookings" id="tXq-RT-Y1h"/>
@@ -488,9 +507,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n4Q-xQ-8Cb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n4Q-xQ-8Cb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tn6-9E-dZL"/>
+                                </constraints>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="0.92549019610000005" green="0.50980392159999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
@@ -525,10 +546,14 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.50980392159999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="n4Q-xQ-8Cb" firstAttribute="top" secondItem="A41-M7-xB4" secondAttribute="top" constant="20" id="14N-Kj-g1S"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PgB-Dj-gN8"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" id="Emn-TS-Z31"/>
                     <connections>
+                        <outlet property="profilePhoto" destination="ogg-6e-bZ5" id="V2c-1w-dGe"/>
                         <outlet property="userBirthday" destination="uFy-to-jsY" id="pAS-36-dWa"/>
                         <outlet property="userEmail" destination="KzG-R1-ueB" id="gxc-9x-3So"/>
                         <outlet property="userFullName" destination="Wf6-0A-P03" id="7NF-Sn-KSn"/>
@@ -554,6 +579,12 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGc-OB-Uhu">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="862"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="PVo-IL-3lf">
+                                                        <rect key="frame" x="8" y="8" width="359" height="128"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                </subviews>
                                                 <color key="backgroundColor" red="0.92549019610000005" green="0.50980392159999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="862" id="8jv-b9-xfs"/>
@@ -585,7 +616,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="Chicken Kobob">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="chickenKobob:" destination="8Ln-gi-9kj" eventType="touchUpInside" id="esM-LS-WYL"/>
@@ -596,7 +627,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="Steak Kobob">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="steakKobob:" destination="8Ln-gi-9kj" eventType="touchUpInside" id="OIs-CH-JXF"/>
@@ -621,7 +652,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="Sausage Kobob">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="sausageKobob:" destination="8Ln-gi-9kj" eventType="touchUpInside" id="7dV-Si-Bw4"/>
@@ -632,7 +663,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="Country Style Ribs Kobob">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="countryStyleRibs:" destination="8Ln-gi-9kj" eventType="touchUpInside" id="JDO-9c-r9b"/>
@@ -643,7 +674,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="Bacon Wrapped Kobob">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="baconWrappedKobob:" destination="8Ln-gi-9kj" eventType="touchUpInside" id="LMu-QG-Jny"/>
@@ -654,7 +685,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="Veggie Kobob">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="veggieKobob:" destination="8Ln-gi-9kj" eventType="touchUpInside" id="9C5-Vh-Ndx"/>
@@ -715,9 +746,9 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chicken + Steak + Ribs + Pineapple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WL-If-RoC">
-                                                <rect key="frame" x="16" y="752" width="244" height="21"/>
+                                                <rect key="frame" x="16" y="752" width="267" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.42745098040000001" green="0.42352941179999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -771,30 +802,30 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hotlink + Chicken (or Steak)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsO-DV-ZIg">
-                                                <rect key="frame" x="19" y="542" width="193" height="21"/>
+                                                <rect key="frame" x="19" y="542" width="207" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" red="0.42745098040000001" green="0.42352941179999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chicken + Steak + Sausage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xd4-xw-y2i">
-                                                <rect key="frame" x="19" y="592" width="188" height="21"/>
+                                                <rect key="frame" x="19" y="592" width="207" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" red="0.42745098040000001" green="0.42352941179999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chicken or Steak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axD-Ze-848">
                                                 <rect key="frame" x="19" y="645" width="130" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" red="0.42745098040000001" green="0.42352941179999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chicken or Steak w/ tortilla shells" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZ2-3g-eUi">
-                                                <rect key="frame" x="16" y="698" width="227" height="21"/>
+                                                <rect key="frame" x="16" y="698" width="244" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" red="0.42745098040000001" green="0.42352941179999998" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -892,16 +923,6 @@
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lyp-CK-Gx9">
                                                 <rect key="frame" x="0.0" y="870" width="375" height="668"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ln-1o-SsA">
-                                                        <rect key="frame" x="103" y="617" width="190" height="30"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                        <state key="normal" title="SUBMIT ORDER">
-                                                            <color key="titleColor" red="0.92549019610000005" green="0.50980392159999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                    </button>
-                                                </subviews>
                                                 <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe to delete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpV-dl-8xs">
@@ -1015,6 +1036,18 @@
                                             <constraint firstAttribute="trailing" secondItem="mGc-OB-Uhu" secondAttribute="trailing" id="XqM-xe-rnt"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdY-ci-xwI">
+                                        <rect key="frame" x="113" y="1489" width="165" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="SUBMIT ORDER">
+                                            <color key="titleColor" red="0.92549019610000005" green="0.50980392159999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitOrderButton:" destination="8Ln-gi-9kj" eventType="touchUpInside" id="mI4-gc-7zx"/>
+                                            <segue destination="Js1-em-Odi" kind="presentation" id="RL4-zc-FqY"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="uCx-l5-YWG" secondAttribute="trailing" id="6jQ-8Z-hgB"/>
@@ -1057,7 +1090,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1BW-ZZ-Myk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3105" y="1014"/>
+            <point key="canvasLocation" x="3104.8000000000002" y="1013.7931034482759"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mne-i5-K82">
+            <objects>
+                <viewController id="Js1-em-Odi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zaA-GJ-xON">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="UzF-Uq-4bC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ti3-Ge-UZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4222" y="1014"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="aQr-7u-jbb">
@@ -1074,7 +1122,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="GaT-cX-mgs">
-                                                <rect key="frame" x="25" y="242" width="325" height="165"/>
+                                                <rect key="frame" x="25" y="262" width="325" height="165"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84I-yo-TJ7">
                                                         <rect key="frame" x="0.0" y="0.0" width="325" height="35"/>
@@ -1164,7 +1212,7 @@
                                                 </date>
                                             </datePicker>
                                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLM-E0-bGD">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                                 <items>
                                                     <navigationItem title="Sign Up" id="K7s-a1-Zuo">
                                                         <barButtonItem key="leftBarButtonItem" title="Back" id="V5f-GM-8Zy">
@@ -1185,7 +1233,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="HuE-64-npp">
-                                                <rect key="frame" x="25" y="74" width="325" height="146"/>
+                                                <rect key="frame" x="25" y="94" width="325" height="146"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="146" id="0e9-W3-Mce"/>
                                                 </constraints>
@@ -1206,10 +1254,9 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Dlf-TD-fh5" secondAttribute="trailing" constant="25" id="1P1-R1-9nQ"/>
                                             <constraint firstItem="GaT-cX-mgs" firstAttribute="top" secondItem="HuE-64-npp" secondAttribute="bottom" constant="22" id="4WN-lf-fok"/>
-                                            <constraint firstItem="FLM-E0-bGD" firstAttribute="top" secondItem="fIe-c3-tRf" secondAttribute="top" id="4qn-uQ-MR8"/>
+                                            <constraint firstItem="FLM-E0-bGD" firstAttribute="top" secondItem="fIe-c3-tRf" secondAttribute="top" constant="20" id="4qn-uQ-MR8"/>
                                             <constraint firstAttribute="trailing" secondItem="BbN-pD-hne" secondAttribute="trailing" constant="25" id="5at-2H-cWq"/>
                                             <constraint firstItem="v2f-nH-hml" firstAttribute="leading" secondItem="fIe-c3-tRf" secondAttribute="leading" constant="25" id="7We-5o-IEP"/>
-                                            <constraint firstItem="HuE-64-npp" firstAttribute="top" secondItem="FLM-E0-bGD" secondAttribute="bottom" constant="30" id="7aO-JY-x1c"/>
                                             <constraint firstAttribute="trailing" secondItem="FLM-E0-bGD" secondAttribute="trailing" id="9M9-VG-iQ0"/>
                                             <constraint firstItem="v2f-nH-hml" firstAttribute="top" secondItem="Dlf-TD-fh5" secondAttribute="bottom" constant="12" id="Ama-zm-wHH"/>
                                             <constraint firstItem="GaT-cX-mgs" firstAttribute="leading" secondItem="fIe-c3-tRf" secondAttribute="leading" constant="25" id="EgD-EO-fD7"/>
@@ -1217,6 +1264,7 @@
                                             <constraint firstAttribute="trailing" secondItem="dij-h4-hbw" secondAttribute="trailing" constant="25" id="GUu-Yj-7JQ"/>
                                             <constraint firstItem="HuE-64-npp" firstAttribute="leading" secondItem="fIe-c3-tRf" secondAttribute="leading" constant="25" id="QEu-Y2-jhr"/>
                                             <constraint firstAttribute="trailing" secondItem="HuE-64-npp" secondAttribute="trailing" constant="25" id="QII-1b-9mn"/>
+                                            <constraint firstItem="HuE-64-npp" firstAttribute="top" secondItem="FLM-E0-bGD" secondAttribute="bottom" constant="30" id="WAd-iY-kMq"/>
                                             <constraint firstAttribute="bottom" secondItem="dij-h4-hbw" secondAttribute="bottom" constant="51" id="WcL-m8-WwD"/>
                                             <constraint firstAttribute="trailing" secondItem="v2f-nH-hml" secondAttribute="trailing" constant="25" id="X5t-6B-Wdj"/>
                                             <constraint firstItem="GaT-cX-mgs" firstAttribute="top" secondItem="HuE-64-npp" secondAttribute="bottom" constant="22" id="aDL-L0-tye"/>

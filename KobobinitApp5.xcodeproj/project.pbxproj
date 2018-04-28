@@ -10,11 +10,13 @@
 		9402A417207F0AFD00127DD0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9402A416207F0AFD00127DD0 /* GoogleService-Info.plist */; };
 		9402A42D2085533D00127DD0 /* homeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402A42C2085533D00127DD0 /* homeScreenViewController.swift */; };
 		9402A42F208553D100127DD0 /* bottomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9402A42E208553D100127DD0 /* bottomTabBarViewController.swift */; };
+		940727A6209182B900BF63AC /* CheckoutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940727A5209182B900BF63AC /* CheckoutRowView.swift */; };
+		940A72CB2092AF5C00896F1D /* ClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A72CA2092AF5C00896F1D /* ClientAPI.swift */; };
+		940A72CF2095030600896F1D /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 940A72CE2095030600896F1D /* credentials.plist */; };
 		942F3C40206F4A3C00AC0C25 /* coreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942F3C3F206F4A3C00AC0C25 /* coreDataViewController.swift */; };
 		9434019820862E4E00BAA0F5 /* accountInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9434019720862E4E00BAA0F5 /* accountInfoViewController.swift */; };
 		9434019A2086307900BAA0F5 /* menuAndBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943401992086307900BAA0F5 /* menuAndBookingViewController.swift */; };
 		9434019C20864ABC00BAA0F5 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9434019B20864ABC00BAA0F5 /* signUpViewController.swift */; };
-		94BDFF54206BE8F3002CF22B /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BDFF53206BE8F3002CF22B /* menuViewController.swift */; };
 		94BDFF56206BE9DA002CF22B /* menuItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BDFF55206BE9DA002CF22B /* menuItemsTableViewCell.swift */; };
 		94C6E6AE2069695C002D3654 /* finalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C6E6AD2069695C002D3654 /* finalTableViewCell.swift */; };
 		94CEBDDB2064419F003DA437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEBDDA2064419F003DA437 /* AppDelegate.swift */; };
@@ -34,12 +36,14 @@
 		9402A416207F0AFD00127DD0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9402A42C2085533D00127DD0 /* homeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeScreenViewController.swift; sourceTree = "<group>"; };
 		9402A42E208553D100127DD0 /* bottomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bottomTabBarViewController.swift; sourceTree = "<group>"; };
+		940727A5209182B900BF63AC /* CheckoutRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckoutRowView.swift; path = /Users/alexstanford/Desktop/Programa/Swift/KobobinitApp5/KobobinitApp5/CheckoutRowView.swift; sourceTree = "<absolute>"; };
+		940A72CA2092AF5C00896F1D /* ClientAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClientAPI.swift; path = /Users/alexstanford/Desktop/Programa/Swift/KobobinitApp5/KobobinitApp5/ClientAPI.swift; sourceTree = "<absolute>"; };
+		940A72CE2095030600896F1D /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		94117DF52064795800DC755F /* KobobinitApp5-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KobobinitApp5-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		942F3C3F206F4A3C00AC0C25 /* coreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coreDataViewController.swift; sourceTree = "<group>"; };
 		9434019720862E4E00BAA0F5 /* accountInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountInfoViewController.swift; sourceTree = "<group>"; };
 		943401992086307900BAA0F5 /* menuAndBookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuAndBookingViewController.swift; sourceTree = "<group>"; };
 		9434019B20864ABC00BAA0F5 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
-		94BDFF53206BE8F3002CF22B /* menuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
 		94BDFF55206BE9DA002CF22B /* menuItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuItemsTableViewCell.swift; sourceTree = "<group>"; };
 		94C6E6AD2069695C002D3654 /* finalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalTableViewCell.swift; sourceTree = "<group>"; };
 		94CEBDD72064419F003DA437 /* KobobinitApp5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KobobinitApp5.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,19 +105,21 @@
 				9434019720862E4E00BAA0F5 /* accountInfoViewController.swift */,
 				94DFCDC3206C418100DCD5BE /* adminPortalViewController.swift */,
 				9402A42E208553D100127DD0 /* bottomTabBarViewController.swift */,
+				940727A5209182B900BF63AC /* CheckoutRowView.swift */,
+				940A72CA2092AF5C00896F1D /* ClientAPI.swift */,
 				942F3C3F206F4A3C00AC0C25 /* coreDataViewController.swift */,
 				943401992086307900BAA0F5 /* menuAndBookingViewController.swift */,
 				94C6E6AD2069695C002D3654 /* finalTableViewCell.swift */,
 				9402A42C2085533D00127DD0 /* homeScreenViewController.swift */,
 				94117DF52064795800DC755F /* KobobinitApp5-Bridging-Header.h */,
 				94CEBDF72064439F003DA437 /* logInViewController.swift */,
-				94BDFF53206BE8F3002CF22B /* menuViewController.swift */,
 				94BDFF55206BE9DA002CF22B /* menuItemsTableViewCell.swift */,
 				9434019B20864ABC00BAA0F5 /* signUpViewController.swift */,
 				94CEBDDC2064419F003DA437 /* ViewController.swift */,
 				94CEBDE42064419F003DA437 /* Assets.xcassets */,
 				94CEBDE62064419F003DA437 /* LaunchScreen.storyboard */,
 				9402A416207F0AFD00127DD0 /* GoogleService-Info.plist */,
+				940A72CE2095030600896F1D /* credentials.plist */,
 				94CEBDE92064419F003DA437 /* Info.plist */,
 				94CEBDE12064419F003DA437 /* KobobinitApp5.xcdatamodeld */,
 			);
@@ -193,6 +199,7 @@
 			files = (
 				94CEBDE82064419F003DA437 /* LaunchScreen.storyboard in Resources */,
 				9402A417207F0AFD00127DD0 /* GoogleService-Info.plist in Resources */,
+				940A72CF2095030600896F1D /* credentials.plist in Resources */,
 				94CEBDE52064419F003DA437 /* Assets.xcassets in Resources */,
 				94CEBDE02064419F003DA437 /* Main.storyboard in Resources */,
 			);
@@ -253,6 +260,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -269,6 +277,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,14 +295,15 @@
 				9434019C20864ABC00BAA0F5 /* signUpViewController.swift in Sources */,
 				94DFCDC4206C418100DCD5BE /* adminPortalViewController.swift in Sources */,
 				9402A42D2085533D00127DD0 /* homeScreenViewController.swift in Sources */,
+				940A72CB2092AF5C00896F1D /* ClientAPI.swift in Sources */,
 				9434019820862E4E00BAA0F5 /* accountInfoViewController.swift in Sources */,
 				942F3C40206F4A3C00AC0C25 /* coreDataViewController.swift in Sources */,
 				94C6E6AE2069695C002D3654 /* finalTableViewCell.swift in Sources */,
 				94BDFF56206BE9DA002CF22B /* menuItemsTableViewCell.swift in Sources */,
 				94CEBDE32064419F003DA437 /* KobobinitApp5.xcdatamodeld in Sources */,
 				94CEBDDD2064419F003DA437 /* ViewController.swift in Sources */,
+				940727A6209182B900BF63AC /* CheckoutRowView.swift in Sources */,
 				94CEBDDB2064419F003DA437 /* AppDelegate.swift in Sources */,
-				94BDFF54206BE8F3002CF22B /* menuViewController.swift in Sources */,
 				9434019A2086307900BAA0F5 /* menuAndBookingViewController.swift in Sources */,
 				9402A42F208553D100127DD0 /* bottomTabBarViewController.swift in Sources */,
 				94CEBDF82064439F003DA437 /* logInViewController.swift in Sources */,

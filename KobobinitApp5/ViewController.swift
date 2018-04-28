@@ -7,6 +7,8 @@
 //
 //HOME SCREEN CONTROL
 import UIKit
+import Stripe
+import Alamofire
 
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
@@ -195,7 +197,13 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         total -= item.price
 
     }
-
     
+    
+    
+    @IBAction func submitOrderButton(_ sender: UIButton) {
+        
+       
+  
 
+    }
 }

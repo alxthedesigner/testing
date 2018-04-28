@@ -1,0 +1,22 @@
+{
+  "name": "kobobinitapp5",
+  "version": "1.0.0",
+  "description": "json for foodapp backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alxthedesigner/testing.git"
+  },
+  "author": "Alexandra Stanford",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alxthedesigner/testing/issues"
+  },
+  "homepage": "https://github.com/alxthedesigner/testing#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
