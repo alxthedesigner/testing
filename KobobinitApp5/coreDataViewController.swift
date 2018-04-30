@@ -26,7 +26,7 @@ class coreDataViewController: UIViewController {
     
     
     //Save User
-    class func saveUserInfo(firstName: String, lastName: String, email: String, password: String){
+    class func saveUserToCoreData(firstName: String, lastName: String, email: String, password: String){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let user = NSEntityDescription.insertNewObject(forEntityName: "Users", into: context)
@@ -53,7 +53,6 @@ class coreDataViewController: UIViewController {
     class func fetchUserInfo() -> [Users]?{
         
         let context = objectContext()
-            
         var user:[Users]? = nil
             
         do  {
@@ -64,7 +63,7 @@ class coreDataViewController: UIViewController {
                 print("Did not retrieve user")
                 return user
             }
-            print("User retrieved!")
+            print("User retrieved sucessfully!")
             return user
         }
     

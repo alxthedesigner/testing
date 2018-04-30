@@ -56,9 +56,7 @@ class logInViewController: UIViewController{
         self.view.addSubview(facebookSignInButton)
     
     }
-    
-    
-    
+ 
     
     //MARK: Log in using Facebook
     /**************************************************************************************
@@ -81,9 +79,7 @@ class logInViewController: UIViewController{
                 accountInfoViewController().retrieveFacebookProfileData()
                 
                 super.performSegue(withIdentifier: "logInToHome", sender: self)
-                
-                
-                
+           
             case .cancelled:
                 print("Log in cancelled!")
              
@@ -93,13 +89,8 @@ class logInViewController: UIViewController{
                 
             }
         }
-        
-        
     }
-    
-    
-    
-    
+
     
     /**************************************************************************************
      *    Title: Sign In with Facebook: Firebase Authentication in Swift 4 (2018)
@@ -110,7 +101,6 @@ class logInViewController: UIViewController{
      *
      ***************************************************************************************/
     
-    //Access Firebase
     func accessFirebase(){
         guard let authToken = AccessToken.current?.authenticationToken else {return}
         let creditials = FacebookAuthProvider.credential(withAccessToken: authToken)
@@ -122,22 +112,9 @@ class logInViewController: UIViewController{
         print("Successfully authenticated using Firebase")
         }
     }
-    
-    
-    
-    
 
-    
-
-    
-    
-    
-    
-    
     
      //MARK: Log in normally
-    
-    
     @IBAction func logInButton(_ sender: UIButton) {
         
       user = coreDataViewController.fetchUserInfo()
@@ -146,16 +123,14 @@ class logInViewController: UIViewController{
             if(logInEmail.text == i.email && logInPassword.text == i.password){
                 //GET POST IMPLEMENTATION
                 guard let backEndUrl = URL(string: "https://jsonplaceholder.typicode.com/")
-                    else{
-                        return
-                }
+                    else{return}
                 success = true
                 performSegue(withIdentifier: "logInToHome", sender: self)
                 self.errorLabel2.text = ""
                 
                 
             }else{
-                print("Invalid Credintials")
+                //print("Invalid Credintials")
                 self.errorLabel2.text = "Invalid Login Info"
                 success = false
             }

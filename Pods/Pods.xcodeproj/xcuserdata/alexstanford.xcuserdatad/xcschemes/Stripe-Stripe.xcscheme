@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "00DE256F3918F9A0E0783DB0B71EB58A"
+               BlueprintIdentifier = "A29AEBBBA37CFD6D5C4DA0CB359DF609"
                BuildableName = "Stripe.bundle"
                BlueprintName = "Stripe-Stripe"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "00DE256F3918F9A0E0783DB0B71EB58A"
+            BlueprintIdentifier = "A29AEBBBA37CFD6D5C4DA0CB359DF609"
             BuildableName = "Stripe.bundle"
             BlueprintName = "Stripe-Stripe"
             ReferencedContainer = "container:Pods.xcodeproj">

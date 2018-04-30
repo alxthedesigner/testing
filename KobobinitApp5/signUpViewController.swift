@@ -1,3 +1,4 @@
+
 //
 //  signUpViewController.swift
 //  KobobinitApp5
@@ -16,17 +17,16 @@ class signUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
   
-    
     @IBOutlet weak var signUpErrorLabel: UILabel!
     var success2 : Bool = false;
     var user:[Users]? = nil
+    var errorMess : String!
     
     lazy var userFirstName = firstNameTextField.text
     lazy var userLastName = lastNameTextField.text
     lazy var userEmail = emailTextField.text
     lazy var userPassword = passwordTextField.text
     
-    lazy var fields: [String] = [userFirstName!, userLastName!, userEmail!, userPassword!, confirmPasswordTextField.text!]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,31 +40,43 @@ class signUpViewController: UIViewController {
     }
     
 
-    @IBAction func submitSignUpButton(_ sender: UIButton) {
-        
-        user = coreDataViewController.fetchUserInfo()
-        
-        for i in user!{
-            if(firstNameTextField.text != "" && lastNameTextField.text != "" && emailTextField.text != "" && passwordTextField.text != "" && confirmPasswordTextField.text != ""){
-                
+    
+    @IBAction func signUpSubmissionButton(_ sender: UIButton) {
+        success2 = true
+
+        if(emailTextField.text == "" || firstNameTextField.text == "" || lastNameTextField.text == ""){
+                errorMess = "Email or name empty"
+                success2 = false
+                self.signUpErrorLabel.text = "\(errorMess)"
+                return
+        }
+        if(passwordTextField.text != confirmPasswordTextField.text){
+                success2 = false
+                errorMess = "Passwords do not match"
+                self.signUpErrorLabel.text = "\(errorMess)"
+                return
+        }
+        if((passwordTextField.text?.count)! < 8){
+            success2 = false
+            errorMess = "Password must be at least 8 characters"
+            self.signUpErrorLabel.text = "\(errorMess)"
+            return
+            
+            }else{
                 success2 = true
                 performSegue(withIdentifier: "alreadyHasAccount", sender: self)
                 self.signUpErrorLabel.text = ""
-                coreDataViewController.saveUserInfo(firstName: userFirstName!, lastName: userLastName!, email: userEmail!, password: userPassword!)
-                
+                coreDataViewController.saveUserToCoreData(firstName: userFirstName!, lastName: userLastName!, email: userEmail!, password: userPassword!)
+                user = coreDataViewController.fetchUserInfo()
                 print(user)
-                
-                
-            }else{
-                print("Invalid Credintials")
-                self.signUpErrorLabel.text = "Invalid Login Info"
-                success2 = false
-            }
-            
+                print(success2)
         }
-        
     }
     
+    func saveUserToFirebase(){
+        
+        
+    }
     
     @IBAction func alreadyHasAccountButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
@@ -76,24 +88,6 @@ class signUpViewController: UIViewController {
     
     
     
-    func allFieldsFilled() -> Bool{
-        
-        if(userFirstName == "" || userLastName == ""){
-            print("First or last name empty")
-            return false
-        }
-        if(userEmail == ""){
-            print("Email empty")
-            return false
-        }
-        if(userPassword == "" || confirmPasswordTextField.text == ""){
-            print("Pass or confirm password empty")
-            return false
-        }
-        
-        return true
-        
-    }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         

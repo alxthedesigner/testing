@@ -353,22 +353,6 @@
                                     <constraint firstAttribute="height" constant="146" id="6Kf-tW-DPq"/>
                                 </constraints>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivC-7U-23a">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Home" id="D9A-oc-tPo">
-                                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="dkX-ak-Nss">
-                                            <color key="tintColor" red="0.92549019610000005" green="0.50980392159999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <action selector="signOutButton:" destination="aOI-8S-YDp" id="iX8-bE-8gI"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dis-bM-st2">
                                 <rect key="frame" x="150" y="417" width="74" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -391,6 +375,22 @@
                                     <segue destination="MKu-Sj-7dg" kind="presentation" identifier="OrderFromSeatSegue" id="FjZ-YN-s5J"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivC-7U-23a">
+                                <rect key="frame" x="0.0" y="10" width="375" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Home" id="D9A-oc-tPo">
+                                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="dkX-ak-Nss">
+                                            <color key="tintColor" red="0.92549019610000005" green="0.50980392159999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="signOutButton:" destination="aOI-8S-YDp" id="iX8-bE-8gI"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -399,8 +399,8 @@
                             <constraint firstItem="3SF-SA-hDC" firstAttribute="top" secondItem="bhj-WP-tO2" secondAttribute="bottom" constant="22" id="EdD-c1-nqV"/>
                             <constraint firstItem="ivC-7U-23a" firstAttribute="trailing" secondItem="hWN-O8-bZC" secondAttribute="trailing" id="MW8-pa-L9P"/>
                             <constraint firstItem="hWN-O8-bZC" firstAttribute="trailing" secondItem="bhj-WP-tO2" secondAttribute="trailing" constant="25" id="SQG-RE-n7I"/>
-                            <constraint firstItem="ivC-7U-23a" firstAttribute="top" secondItem="pKA-kJ-qUC" secondAttribute="top" id="a2v-Kq-kSO"/>
-                            <constraint firstItem="bhj-WP-tO2" firstAttribute="top" secondItem="ivC-7U-23a" secondAttribute="bottom" constant="30" id="bRS-IV-bhh"/>
+                            <constraint firstItem="ivC-7U-23a" firstAttribute="top" secondItem="pKA-kJ-qUC" secondAttribute="top" constant="10" id="a2v-Kq-kSO"/>
+                            <constraint firstItem="bhj-WP-tO2" firstAttribute="top" secondItem="ivC-7U-23a" secondAttribute="bottom" constant="20" id="bRS-IV-bhh"/>
                             <constraint firstItem="3SF-SA-hDC" firstAttribute="leading" secondItem="hWN-O8-bZC" secondAttribute="leading" constant="45" id="iJY-1H-Itu"/>
                             <constraint firstItem="hWN-O8-bZC" firstAttribute="trailing" secondItem="3SF-SA-hDC" secondAttribute="trailing" constant="45" id="lLh-uG-jeR"/>
                             <constraint firstItem="bhj-WP-tO2" firstAttribute="leading" secondItem="hWN-O8-bZC" secondAttribute="leading" constant="25" id="o5Z-jq-ilH"/>
@@ -460,7 +460,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2jr-hl-erR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Menu" id="NbN-8v-ZVa"/>
+                    <tabBarItem key="tabBarItem" title="Menu" id="NbN-8v-ZVa">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GKR-BX-Rom" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -474,9 +476,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Sw-ip-www">
-                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Sw-ip-www">
+                                <rect key="frame" x="0.0" y="12" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="68H-Fj-qU9"/>
                                     <constraint firstAttribute="height" constant="50" id="Cdw-Qz-sRq"/>
                                 </constraints>
                                 <textAttributes key="titleTextAttributes">
@@ -489,11 +493,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.50980392159999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="1Sw-ip-www" firstAttribute="top" secondItem="j2w-ZM-FkL" secondAttribute="top" constant="20" id="dBy-hp-rdh"/>
+                            <constraint firstItem="1Sw-ip-www" firstAttribute="top" secondItem="j2w-ZM-FkL" secondAttribute="top" constant="12" id="dBy-hp-rdh"/>
+                            <constraint firstItem="1Sw-ip-www" firstAttribute="leading" secondItem="j2w-ZM-FkL" secondAttribute="leading" id="v1h-O0-sWU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="718-B3-gZ9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Bookings" id="tXq-RT-Y1h"/>
+                    <tabBarItem key="tabBarItem" title="Bookings" id="tXq-RT-Y1h">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9z-ch-CS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -507,9 +514,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n4Q-xQ-8Cb">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4Q-xQ-8Cb">
                                 <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="g8l-uR-1zH"/>
                                     <constraint firstAttribute="height" constant="50" id="tn6-9E-dZL"/>
                                 </constraints>
                                 <textAttributes key="titleTextAttributes">
@@ -519,41 +528,60 @@
                                     <navigationItem title="Account" id="rlR-Lo-08h"/>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ogg-6e-bZ5">
-                                <rect key="frame" x="67" y="103" width="240" height="226"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pmV-1D-EVi">
+                                <rect key="frame" x="67" y="113" width="240" height="201"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wf6-0A-P03">
-                                <rect key="frame" x="67" y="367" width="240" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzG-R1-ueB">
-                                <rect key="frame" x="67" y="396" width="240" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFy-to-jsY">
-                                <rect key="frame" x="67" y="425" width="240" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ttp-5p-Ifu">
+                                <rect key="frame" x="45" y="367" width="285" height="77.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wf6-0A-P03">
+                                        <rect key="frame" x="0.0" y="0.0" width="285" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzG-R1-ueB">
+                                        <rect key="frame" x="0.0" y="28.5" width="285" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFy-to-jsY">
+                                        <rect key="frame" x="0.0" y="57" width="285" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="uFy-to-jsY" secondAttribute="trailing" id="4Co-eS-XoB"/>
+                                    <constraint firstItem="KzG-R1-ueB" firstAttribute="leading" secondItem="Ttp-5p-Ifu" secondAttribute="leading" id="Xcq-En-Fsy"/>
+                                    <constraint firstItem="Wf6-0A-P03" firstAttribute="leading" secondItem="Ttp-5p-Ifu" secondAttribute="leading" id="ag5-y0-2sW"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wf6-0A-P03" secondAttribute="trailing" id="j56-QF-61q"/>
+                                    <constraint firstAttribute="trailing" secondItem="KzG-R1-ueB" secondAttribute="trailing" id="ppN-Ve-ZdB"/>
+                                    <constraint firstItem="uFy-to-jsY" firstAttribute="leading" secondItem="Ttp-5p-Ifu" secondAttribute="leading" id="sCu-r4-TMA"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.50980392159999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="n4Q-xQ-8Cb" firstAttribute="top" secondItem="A41-M7-xB4" secondAttribute="top" constant="20" id="14N-Kj-g1S"/>
+                            <constraint firstItem="Ttp-5p-Ifu" firstAttribute="leading" secondItem="PgB-Dj-gN8" secondAttribute="leading" constant="45" id="Hs4-Aw-pWZ"/>
+                            <constraint firstItem="pmV-1D-EVi" firstAttribute="leading" secondItem="PgB-Dj-gN8" secondAttribute="leading" constant="67" id="Ivp-qx-7cW"/>
+                            <constraint firstItem="PgB-Dj-gN8" firstAttribute="trailing" secondItem="Ttp-5p-Ifu" secondAttribute="trailing" constant="45" id="OIz-c1-bsJ"/>
+                            <constraint firstItem="Ttp-5p-Ifu" firstAttribute="top" secondItem="pmV-1D-EVi" secondAttribute="bottom" constant="53" id="QkW-kB-pBd"/>
+                            <constraint firstItem="pmV-1D-EVi" firstAttribute="top" secondItem="n4Q-xQ-8Cb" secondAttribute="bottom" constant="43" id="VZr-U7-4sl"/>
+                            <constraint firstItem="PgB-Dj-gN8" firstAttribute="bottom" secondItem="Ttp-5p-Ifu" secondAttribute="bottom" constant="173.5" id="h0A-cP-BAu"/>
+                            <constraint firstItem="n4Q-xQ-8Cb" firstAttribute="leading" secondItem="A41-M7-xB4" secondAttribute="leading" id="kO3-RN-fNO"/>
+                            <constraint firstItem="PgB-Dj-gN8" firstAttribute="trailing" secondItem="pmV-1D-EVi" secondAttribute="trailing" constant="68" id="p6C-FB-Om9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PgB-Dj-gN8"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" id="Emn-TS-Z31"/>
+                    <tabBarItem key="tabBarItem" title="Account" id="Emn-TS-Z31">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
+                    </tabBarItem>
                     <connections>
-                        <outlet property="profilePhoto" destination="ogg-6e-bZ5" id="V2c-1w-dGe"/>
+                        <outlet property="facebookProfilePic" destination="pmV-1D-EVi" id="d2P-BL-fvZ"/>
                         <outlet property="userBirthday" destination="uFy-to-jsY" id="pAS-36-dWa"/>
                         <outlet property="userEmail" destination="KzG-R1-ueB" id="gxc-9x-3So"/>
                         <outlet property="userFullName" destination="Wf6-0A-P03" id="7NF-Sn-KSn"/>
@@ -1194,7 +1222,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="submitSignUpButton:" destination="o73-Bt-5mh" eventType="touchUpInside" id="hvt-Oj-kKH"/>
+                                                    <action selector="signUpSubmissionButton:" destination="o73-Bt-5mh" eventType="touchUpInside" id="hvt-Oj-kKH"/>
                                                 </connections>
                                             </button>
                                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FMO-Hc-K50">
