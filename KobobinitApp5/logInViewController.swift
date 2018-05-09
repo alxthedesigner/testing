@@ -11,8 +11,9 @@ import FacebookCore
 import FacebookLogin
 import FBSDKLoginKit
 import FirebaseAuth
-
-
+import FirebaseDatabase
+import FirebaseStorage
+import SwiftyJSON
 
 
 class logInViewController: UIViewController{
@@ -23,13 +24,18 @@ class logInViewController: UIViewController{
 
     @IBOutlet var logInEmail: UITextField!
     @IBOutlet var logInPassword: UITextField!
+    @IBOutlet weak var userFullName: UILabel?
+    @IBOutlet weak var userEmail: UILabel?
+    @IBOutlet weak var userBirthday: UILabel?
+    @IBOutlet weak var profilePicImageView: UIImageView!
     
     
-    /*@IBOutlet weak var userFullName: UILabel!
-    @IBOutlet weak var userEmail: UILabel!
-    @IBOutlet weak var userBirthday: UILabel!
-    
-    lazy var eml = userEmail.text*/
+    var jsonID : String?
+    var jsonFirstName : String?
+    var jsonLastName : String?
+    var jsonEmail : String?
+    var jsonBirthday : String?
+
     
     
     var facebookSignInButton : UIButton!
@@ -52,9 +58,10 @@ class logInViewController: UIViewController{
         facebookSignInButton.layer.cornerRadius = 3
         facebookSignInButton.addTarget(self, action: #selector(facebookLoginButtonAction), for: .touchUpInside)
         
+        accountInfoViewController().retrieveFacebookProfileData()
         
         self.view.addSubview(facebookSignInButton)
-    
+        
     }
  
     
@@ -71,15 +78,15 @@ class logInViewController: UIViewController{
     @objc func facebookLoginButtonAction(){
         
         let manager = LoginManager()
-        manager.logIn(readPermissions: [ .publicProfile, .email, .userFriends, .userBirthday], viewController: self) { (result) in
+        manager.logIn(readPermissions: [ .publicProfile, .email, .userFriends, .userBirthday, .userPhotos], viewController: self) { (result) in
             switch result{
             case .success(grantedPermissions: _, declinedPermissions: _, token: _):
                 self.success = true
-                self.accessFirebase()
+                self.authFacebookWithFirebase()
                 accountInfoViewController().retrieveFacebookProfileData()
-                
                 super.performSegue(withIdentifier: "logInToHome", sender: self)
-           
+                
+                
             case .cancelled:
                 print("Log in cancelled!")
              
@@ -91,40 +98,44 @@ class logInViewController: UIViewController{
         }
     }
 
-    
-    /**************************************************************************************
-     *    Title: Sign In with Facebook: Firebase Authentication in Swift 4 (2018)
-     *    Author: Alex Nagy (Rebeloper - Rebel Developer)
-     *    Date: Feb 19, 2018
-     *    Code version: 4.0
-     *    Availability: https://www.youtube.com/watch?v=D4Ex2QgBy4A
-     *
-     ***************************************************************************************/
-    
-    func accessFirebase(){
-        guard let authToken = AccessToken.current?.authenticationToken else {return}
-        let creditials = FacebookAuthProvider.credential(withAccessToken: authToken)
-        Auth.auth().signIn(with: creditials) {(user, err) in
-            if let err = err {
-                print(err)
-                return
-            }
-        print("Successfully authenticated using Firebase")
-        }
-    }
 
     
-     //MARK: Log in normally
+    func authFacebookWithFirebase(){
+        guard let authToken = AccessToken.current?.authenticationToken else {return}
+        let creditials = FacebookAuthProvider.credential(withAccessToken: authToken)
+        
+       
+        Auth.auth().signIn(with: creditials) {(user, error) in
+            if let error = error {
+                print(error)
+                return
+            }
+        print("Successfully authenticated Facebook Profile using Firebase")
+        }
+       
+        
+    }
+    
+    func authLocalUserWithFirebase(){
+    
+    Auth.auth().signIn(withEmail: logInEmail.text!, password: logInPassword.text!) { (user, error) in
+    if let error = error {
+    print(error)
+    return
+    }
+    print("Successfully authenticated user using Firebase")
+    }
+    }
+    
+    //MARK: Log in locally
     @IBAction func logInButton(_ sender: UIButton) {
         
       user = coreDataViewController.fetchUserInfo()
         
         for i in user!{
             if(logInEmail.text == i.email && logInPassword.text == i.password){
-                //GET POST IMPLEMENTATION
-                guard let backEndUrl = URL(string: "https://jsonplaceholder.typicode.com/")
-                    else{return}
                 success = true
+                authLocalUserWithFirebase()
                 performSegue(withIdentifier: "logInToHome", sender: self)
                 self.errorLabel2.text = ""
                 
@@ -139,6 +150,12 @@ class logInViewController: UIViewController{
     
     }
     
+    
+    func saveUserToFirebase(){
+        
+        
+    }
+    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
     
         if(identifier == "logInToHome"){
@@ -151,7 +168,9 @@ class logInViewController: UIViewController{
         
     return true
     }
+}
+
     
 
     
-}
+

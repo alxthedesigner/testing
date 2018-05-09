@@ -16,7 +16,7 @@ class accountInfoViewController: UIViewController {
     @IBOutlet weak var userFullName: UILabel?
     @IBOutlet weak var userEmail: UILabel?
     @IBOutlet weak var userBirthday: UILabel?
-    @IBOutlet weak var facebookProfilePic: UIImageView?
+    @IBOutlet weak var profilePicImageView: UIImageView!
     
     
     var jsonID : String?
@@ -25,30 +25,27 @@ class accountInfoViewController: UIViewController {
     var jsonEmail : String?
     var jsonBirthday : String?
 
-    var profilePicture : UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+  
         retrieveFacebookProfileData()
-        
-        
     }
 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
     
     func retrieveFacebookProfileData(){
     
-        let profilePicURL = "https:graph.facebook.com/\(self.jsonID)/picure?type=large"
+        //let profilePicURL = "https:graph.facebook.com/\(self.jsonID)/picure?type=large"
         let graphPath = "/me"
         let accToken = AccessToken.current
-        let parameters: [String : String]? = ["fields": "id, first_name,last_name,email,birthday,picture.type(large)"]
+        let parameters: [String : String]? = ["fields": "id, first_name,last_name,email,birthday"]
+        //picture.type(large)
         let httpMethod: GraphRequestHTTPMethod = .GET
         let apiVersion: GraphAPIVersion = .defaultVersion
         let graphConnection = GraphRequestConnection()
@@ -72,7 +69,7 @@ class accountInfoViewController: UIViewController {
                 self.jsonEmail = jsonTypeResponse["email"].string
                 self.jsonBirthday = jsonTypeResponse["birthday"].string
                
-                
+                /*//To Retrieve FaceBook Profile Picture
                 //guard let profilePicURL = jsonTypeResponse["profile"]["data"]["url"].string else {return}
                 
                 //guard let url = URL(string: profilePicURL) else {return}
@@ -82,13 +79,16 @@ class accountInfoViewController: UIViewController {
                 URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in if let error = error{
                         print(error)
                     }
-                    guard let data = data else {return}
-                    print(data)
+                    //guard let data = data else {return}
                     DispatchQueue.main.async {
-                        self.profilePicture = UIImage(data: data)
-                        self.facebookProfilePic?.image = self.profilePicture
+                        guard let data = data else {return}
+                        guard let profilePicture : UIImage = UIImage(data: data) else {return}
+                        print(profilePicture)
+                        self.profilePicImageView.image = profilePicture
+                        
+                        
                     }
-                }).resume()
+                }).resume()*/
                 
                 
                 if(self.jsonID != nil){

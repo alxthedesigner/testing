@@ -5,7 +5,7 @@
 //  Created by Alex Stanford on 3/22/18.
 //  Copyright © 2018 Alex Stanford. All rights reserved.
 //
-//HOME SCREEN CONTROL
+
 import UIKit
 import Stripe
 import Alamofire
@@ -25,24 +25,14 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     @IBOutlet weak var totalPricerLabelBottom: UILabel!
     @IBOutlet weak var orderTableView: UITableView!
     
-    
-    
     var itemsInOrder: [menuItem] = []
-    
-    
-    
+    var tax = 0.06
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         orderTableView?.delegate = self
         orderTableView?.dataSource = self
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
@@ -52,41 +42,34 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             return itemsInOrder.count
     }
     
-    
-    
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
     
-        
-            
             let itemTitle1 = itemsInOrder[indexPath.row]
             
             let cell2 = orderTableView.dequeueReusableCell(withIdentifier: "orderCell") as! finalTableViewCell
             cell2.itemName.text = itemTitle1.name
             
             return cell2
-
-        
     }
+    
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
+    
     //Swipe-to-Delete
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        
         
         let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
             
             self.decrementItem(item: self.itemsInOrder[indexPath.row])
             self.itemsInOrder.remove(at: indexPath.row)
             self.orderTableView.deleteRows(at: [indexPath], with: .top)
-            
-          
             self.counter -= 1
+            
             print(self.itemsInOrder)
-          
         }
         return [delete]
     }
@@ -94,7 +77,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     @IBAction func backButton(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
-    
     
     
     //MARK: ITEM BUTTONS
@@ -158,52 +140,45 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
   
     //MARK: FUNCTIONS
-    var tax = 0.06
-    var total: Double = 0.00{
-        didSet{
-            totalPricerLabelTop.text = "\(total)"
-            totalPricerLabelBottom.text = totalPricerLabelTop.text
-        }
-    }
-    var counter: Int = 0{
-        didSet{
-            numOfItemsInOrder.text = "\(counter)"
-            numOfItemsInOrder2.text = numOfItemsInOrder.text
-        }
-    }
-    
-    func insertNewItem(item: menuItem){
-        itemsInOrder.append(item)
-        
-        let indexPath = IndexPath(row: itemsInOrder.count - 1, section: 0)
-        
-        orderTableView.beginUpdates()
-        orderTableView.insertRows(at: [indexPath], with: .automatic)
-        orderTableView.endUpdates()
-        
-    }
-
     func addRecipeToOrder(item: menuItem){
-
         total += item.price //+ (price * tax)
         counter += 1
         
         insertNewItem(item: item)
     }
     
-    
-    func decrementItem(item: menuItem){
-
-        total -= item.price
-
+    func insertNewItem(item: menuItem){
+        itemsInOrder.append(item)
+        let indexPath = IndexPath(row: itemsInOrder.count - 1, section: 0)
+        
+        orderTableView.beginUpdates()
+        orderTableView.insertRows(at: [indexPath], with: .automatic)
+        orderTableView.endUpdates()
     }
     
     
+    func decrementItem(item: menuItem){
+        total -= item.price
+    }
     
+
+    var total: Double = 0.00{
+        didSet{
+            totalPricerLabelTop.text = "\(total)"
+            totalPricerLabelBottom.text = totalPricerLabelTop.text
+        }
+    }
+    
+    
+    var counter: Int = 0{
+        didSet{
+            numOfItemsInOrder.text = "\(counter)"
+            numOfItemsInOrder2.text = numOfItemsInOrder.text
+        }
+    }
+  
     @IBAction func submitOrderButton(_ sender: UIButton) {
         
        
-  
-
     }
 }

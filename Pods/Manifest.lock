@@ -34,6 +34,9 @@ PODS:
   - Firebase/Database (4.11.0):
     - Firebase/Core
     - FirebaseDatabase (= 4.1.5)
+  - Firebase/Storage (4.11.0):
+    - Firebase/Core
+    - FirebaseStorage (= 2.1.3)
   - FirebaseAnalytics (4.1.0):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
@@ -51,6 +54,10 @@ PODS:
     - leveldb-library (~> 1.18)
   - FirebaseInstanceID (2.0.10):
     - FirebaseCore (~> 4.0)
+  - FirebaseStorage (2.1.3):
+    - FirebaseAnalytics (~> 4.1)
+    - FirebaseCore (~> 4.0)
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleAPIClientForREST/Calendar (1.2.1):
     - GoogleAPIClientForREST/Core
     - GTMSessionFetcher (>= 1.1.7)
@@ -96,6 +103,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - Firebase/Storage
   - GoogleAPIClientForREST/Calendar (~> 1.2.1)
   - GoogleSignIn (~> 4.1.1)
   - Stripe
@@ -116,6 +124,7 @@ SPEC CHECKSUMS:
   FirebaseCore: b981f47e5254cbcfdeb483355300d743f6fcab2c
   FirebaseDatabase: 5f0bc6134c5c237cf55f9e1249d406770a75eafd
   FirebaseInstanceID: 8d20d890d65c917f9f7d9950b6e10a760ad34321
+  FirebaseStorage: 9a863a2bb96c406958eeff7c2f1dfa9f44c44a13
   GoogleAPIClientForREST: a8b95a252014ce2e618df6b75dc72eca2c00b4af
   GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
@@ -126,6 +135,6 @@ SPEC CHECKSUMS:
   Stripe: 3230cdf8a8b0c04902e45e86f222fb82a926239c
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 838baafb33c1a7c097ae48a4e5ede7aae3e79a54
+PODFILE CHECKSUM: b6f01f0d62faa5ad8bb96064cbbfdc88c77e26f5
 
 COCOAPODS: 1.4.0

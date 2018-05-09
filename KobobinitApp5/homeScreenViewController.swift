@@ -10,6 +10,7 @@
 import UIKit
 import GoogleAPIClientForREST
 import GoogleSignIn
+import Firebase
 
 class homeScreenViewController: UIViewController{
     
@@ -28,11 +29,18 @@ class homeScreenViewController: UIViewController{
   
 
     @IBAction func signOutButton(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-    }
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            dismiss(animated: true, completion: nil)
+            print("User Signed out successfully")
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
 
-}
+    }
 
 /*Portions of this page are reproduced from work created and shared by Google and
 used according to terms described in the Creative Commons 3.0 Attribution License.
 https://developers.google.com/calendar/quickstart/ios?ver=swift */
+}

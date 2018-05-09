@@ -26,17 +26,16 @@ class coreDataViewController: UIViewController {
     
     
     //Save User
-    class func saveUserToCoreData(firstName: String, lastName: String, email: String, password: String){
+    class func saveUserToCoreData(birthday: String, firstName: String, lastName: String, email: String, password: String){
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let user = NSEntityDescription.insertNewObject(forEntityName: "Users", into: context)
-        
 
+            user.setValue(birthday, forKey: "birthday")
             user.setValue(firstName, forKey: "firstName")
             user.setValue(lastName, forKey: "lastName")
             user.setValue(email, forKey: "email")
             user.setValue(password, forKey: "password")
-        
         
         do{
             try context.save()
@@ -45,7 +44,6 @@ class coreDataViewController: UIViewController {
         catch{
             print("USER NOT SAVED")
         }
-        
     }
     
     

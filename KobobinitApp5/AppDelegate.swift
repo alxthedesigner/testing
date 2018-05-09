@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let annotation = options[UIApplicationOpenURLOptionsKey.annotation]
         
         
-        let facebookLoginHandled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String!, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+        let facebookLoginHandled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[.sourceApplication] as! String!, annotation: options[.annotation])
         
         let googleCalendarHandled = GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication, annotation: annotation)
         
