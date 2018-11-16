@@ -111,10 +111,12 @@ class accountInfoViewController: UIViewController {
     
     
     func changeNames(){
+        if(jsonID != nil){
         userFullName?.text = "\(jsonFirstName!)" + " " + "\(jsonLastName!)"
         userEmail?.text = jsonEmail
         userBirthday?.text = jsonBirthday
         //facebookProfilePic?.image = profilePicture
+        }
     }
     
 }

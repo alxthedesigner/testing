@@ -104,7 +104,6 @@ class logInViewController: UIViewController{
         guard let authToken = AccessToken.current?.authenticationToken else {return}
         let creditials = FacebookAuthProvider.credential(withAccessToken: authToken)
         
-       
         Auth.auth().signIn(with: creditials) {(user, error) in
             if let error = error {
                 print(error)
@@ -112,19 +111,18 @@ class logInViewController: UIViewController{
             }
         print("Successfully authenticated Facebook Profile using Firebase")
         }
-       
-        
     }
+    
     
     func authLocalUserWithFirebase(){
     
-    Auth.auth().signIn(withEmail: logInEmail.text!, password: logInPassword.text!) { (user, error) in
-    if let error = error {
-    print(error)
-    return
-    }
-    print("Successfully authenticated user using Firebase")
-    }
+        Auth.auth().signIn(withEmail: logInEmail.text!, password: logInPassword.text!) { (user, error) in
+            if let error = error {
+                print(error)
+                return
+            }
+        print("Successfully authenticated user using Firebase")
+        }
     }
     
     //MARK: Log in locally
@@ -145,9 +143,7 @@ class logInViewController: UIViewController{
                 self.errorLabel2.text = "Invalid Login Info"
                 success = false
             }
-        
         }
-    
     }
     
     
@@ -155,6 +151,7 @@ class logInViewController: UIViewController{
         
         
     }
+   
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
     

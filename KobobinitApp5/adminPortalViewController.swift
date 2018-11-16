@@ -14,8 +14,8 @@ class adminPortalViewController: UIViewController {
     @IBOutlet weak var onTheClockPasswordTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
-    let empPortalUserName = "adminUser"
-    let empPortalPassword = "adminUserHere"
+    let empPortalUserName = "admin"
+    let empPortalPassword = "password"
   
     var success : Bool = false;
     
@@ -56,6 +56,9 @@ class adminPortalViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func adminBack(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
